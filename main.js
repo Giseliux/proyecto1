@@ -33,18 +33,30 @@ class Escenario {
       //acceder a los arreglos
       this.direccion='izquierda'
       
-      this.arregloIzquierda[0]='./assets/frame-01.gif'
-      this.arregloIzquierda[1]='./assets/frame-03.gif'
-      this.arregloIzquierda[2]='./assets/frame-05.gif'
-      this.arregloIzquierda[3]='./assets/frame-07.gif'
+      this.arregloIzquierda[0]=new Image()
+      this.arregloIzquierda[1]=new Image()
+      this.arregloIzquierda[2]=new Image()
+      this.arregloIzquierda[3]=new Image()
 
-      this.arregloDerecha[0]='./assets/frame-12.gif'
-      this.arregloDerecha[1]='./assets/frame-14.gif'
-      this.arregloDerecha[2]='./assets/frame-16.gif'
-      this.arregloDerecha[3]='./assets/frame-18.gif'
+      this.arregloDerecha[0]=new Image()
+      this.arregloDerecha[1]=new Image()
+      this.arregloDerecha[2]=new Image()
+      this.arregloDerecha[3]=new Image()
+
+      this.arregloIzquierda[0].src='./assets/frame-01.gif'
+      this.arregloIzquierda[1].src='./assets/frame-03.gif'
+      this.arregloIzquierda[2].src='./assets/frame-05.gif'
+      this.arregloIzquierda[3].src='./assets/frame-07.gif'
+
+      this.arregloDerecha[0].src='./assets/frame-12.gif'
+      this.arregloDerecha[1].src='./assets/frame-14.gif'
+      this.arregloDerecha[2].src='./assets/frame-16.gif'
+      this.arregloDerecha[3].src='./assets/frame-18.gif'
     }
     draw() {
+      
       console.log(this.direccion)
+      
         if(this.direccion=='derecha'){
           //imgDerecha es un arreglo de derecha
           ctx.drawImage(this.arregloDerecha[this.estado], this.x, this.y, this.width, this.height)
@@ -55,7 +67,7 @@ class Escenario {
     }
    moveLeft(){
         this.x -= 10
-      
+        this.direccion='izquierda'
         if(this.estado<3){
           this.estado++
         }else if(this.estado==0){
@@ -66,7 +78,8 @@ class Escenario {
    }
    moveRight(){
     this.x += 10
-  
+    this.direccion='derecha'
+      
     if(this.estado<3){
       this.estado++
     }else if(this.estado==0){
@@ -119,7 +132,7 @@ class Escenario {
         jugador.moveLeft()
         break
       case 39:
-        carrito.moveRight()
+        jugador.moveRight()
         break
       case 70:
         restart()
