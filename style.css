@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: teal
+}
+
+#escenario{
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+ button {
+    font-size: 20px;
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border: 0;
+    box-shadow: 0;
+    border-radius: 5px;
+    margin-top: 50vh;
+    margin-left: 5vw;
+    width: 150px;
+    height: 50px;
+  }
