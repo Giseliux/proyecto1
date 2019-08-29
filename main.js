@@ -292,7 +292,10 @@ function checaLombriz(){
           if(element.tipo == 'vegetal'){
            jugador.hambre=jugador.hambre+1
            ayudantes.splice(indiceAyudante, 1);
-        }
+        }else if(element.tipo == 'cascaron'){
+          composta.ph=composta.ph+1
+          ayudantes.splice(indiceAyudante, 1);
+       }
     }
   })
 }
