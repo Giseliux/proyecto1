@@ -8,22 +8,41 @@
     <title>Aprendamos a compostear</title>
 </head>
 <body>
-        <div id="escenario">
-          <canvas width="800" height="500"></canvas>
-          <div>
+        <div id="contenedor">
+            <div id="portada1" class="portadas" >
+                <div><h1>Aprendamos a compostear</h1></div>
+                <div><img src="./assets/lombriz.png" ></img></div>
+                <div id="botones"><button id="instruc-button">Instrucciones</button>
+                      <button id="start-button">StartGame</button>  
+                </div>
+            </div>
 
-          
-          <p id="tituloph"><h1 id="phComposta"></h1></p>
-          <br>
-          <p id="alimento"><h1 id="alimentoLombriz"></h1></p>
-          <br>
-          <p id="humedad"><h1 id="humedaComposta"></h1></p>
+            <div id="portada2" class="portadas" >
+                <div style="margin-left: 50px"><h1>Instrucciones</h1></div>
+                <p>KID <img src="./assets/gusano-imagen-animada-0090.gif" width="50" height="50" style="margin-left:5px">
+                la lombriz roja californiana te ayudará a tener tu lombricomposta en buen estado.</p>
+                <p>La composta <img src="./assets/composta2.png" width="90" height="90" style="margin-left:5px">
+                  tiene que manetener su nivel de pH en 7 si no perderás!!.</p>
+                  <p>El cascarón <img src="./assets/cascaron.png" width="50" height="50" style="margin-left: 5px"> 
+                    te ayudará  a mantener 
+                ese nivel de pH.</p>
+                <p>Los vegetales <img src="./assets/verdura1.png" width="50" height="50" style="margin-left: 5px"> 
+                  <img src="./assets/verdura3.png" width="50" height="50" style="margin-left: 5px"> 
+                  le darán alimento a la lombriz, debe de ser mayor a 30, si no perderás.</p>
+                <p>La mosca  <img src="./assets/mosca.gif" width="50" height="50" style="margin-left: 5px"> 
+                  bajará  el nivel del pH en tu composta.</p>
+               
+                <p>El agua<img src="./assets/gota-grande_2.gif" width="50" height="50" style="margin-left: 5px">
+                  sólo deberás seleccionarla si tu humedad es menor
+                a 60%.</p>
+                    <button id="start-button2" style="float: right; margin-top:-25px">StartGame</button>  
+                </div>
+            </div>
+            <div id="portada3" class="portadas" >
+                <canvas width="900" height="600" class="portadas"></canvas>
+            </div>
+
         </div>
-          <button id="start-button">StartGame</button>
-        </div>
-       
-        
     <script type="text/javascript" src="main.js"></script>
-</div>
 </body>
 </html>
